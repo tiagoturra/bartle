@@ -159,7 +159,7 @@ export function BartlePage() {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false)
   const currentQuestion = testConfig.questions[currentIndex]
 
-  function startTest() {
+  function beginTest() {
     setAnswers({})
     setCurrentIndex(0)
     setScores(null)
@@ -167,12 +167,23 @@ export function BartlePage() {
     setPhase('test')
   }
 
+  function startTest() {
+    if (scores) {
+      setPhase('results')
+      return
+    }
+
+    beginTest()
+  }
+
   function resetTest() {
-    startTest()
+    beginTest()
   }
 
   useEffect(() => {
     if (phase === 'intro') {
+      if (scores) return
+
       const result = removeSessionStorage(progressStorageKey)
       if (!result.ok) {
         console.error(result.error)
@@ -199,7 +210,7 @@ export function BartlePage() {
     } else {
       setStorageError(false)
     }
-  }, [advanceOnSelection, answers, currentIndex, phase])
+  }, [advanceOnSelection, answers, currentIndex, phase, scores])
 
   useEffect(() => {
     if (phase !== 'test' || !advanceOnSelection) return
@@ -422,7 +433,7 @@ export function BartlePage() {
 
         {phase === 'results' && scores && (
           <div className="flex flex-1 items-center justify-center py-9 md:py-[70px]">
-            <ResultsPanel scores={scores} onRestart={startTest} />
+            <ResultsPanel scores={scores} onRestart={beginTest} />
           </div>
         )}
       </div>

@@ -33,7 +33,7 @@ Translated interface text is in `src/i18n/locales/{pt-BR,fr-FR,de-DE}/common.jso
 
 The UI uses Tailwind utility classes for standard layout, spacing, typography, colors, and responsive styling. Component Sass modules are reserved for bespoke visual effects and animation.
 
-Test progress is saved in the current browser tab and restored after a page reload. The **Reset test** action clears the saved answers and starts again from the first question.
+Test progress and completed results are saved in the current browser tab and restored after a page reload. Returning to the intro and choosing **Begin your story** again displays the saved result; choose **Play again** on the results page to retake the test. The **Reset test** action clears the saved answers and starts again from the first question.
 On the results page, **Copy image** captures the player profile and score breakdown as a PNG and copies it to the clipboard. Clipboard image support requires a secure browser context and permission to write to the clipboard.
 
 ## Scoring
