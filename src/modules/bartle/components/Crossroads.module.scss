@@ -48,6 +48,14 @@
   pointer-events: none;
 }
 
+@media (max-width: 640px) {
+  .roadMap {
+    inset: 0 0 auto;
+    height: auto;
+    aspect-ratio: 640 / 280;
+  }
+}
+
 @media (max-width: 420px) {
   .crossroads {
     padding-top: 7.5rem;

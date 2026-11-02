@@ -8,6 +8,14 @@
   pointer-events: none;
 }
 
+@media (max-width: 640px) {
+  .motionLayer {
+    inset: 0 0 auto;
+    height: auto;
+    aspect-ratio: 640 / 280;
+  }
+}
+
 .traveler {
   filter: drop-shadow(0 5px 8px rgba(4, 12, 8, 0.38));
   pointer-events: none;

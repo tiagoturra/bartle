@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Check, RotateCcw } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { Question } from '../types'
@@ -14,7 +14,6 @@ interface QuestionCardProps {
   isFirst: boolean
   onSelect: (answerId: string) => void
   onPrevious: () => void
-  onReset: () => void
 }
 
 export function QuestionCard({
@@ -25,7 +24,6 @@ export function QuestionCard({
   isFirst,
   onSelect,
   onPrevious,
-  onReset,
 }: QuestionCardProps) {
   const { t } = useTranslation()
   const progress = ((questionIndex + 1) / questionCount) * 100
@@ -113,18 +111,18 @@ export function QuestionCard({
 
           return (
             <button
-              className={`group grid min-h-[110px] w-full cursor-pointer grid-cols-[1.875rem_1fr_1.25rem] items-center gap-2.5 border px-3 py-3 text-left leading-relaxed text-cream transition duration-200 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-accent/[0.07] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[96px] sm:grid-cols-[2.125rem_1fr_1.25rem] sm:gap-3 sm:px-4 ${styles.pathChoice} ${isSelected ? `border-accent bg-accent/10 shadow-[inset_3px_0_0_var(--color-accent)] ${styles.twinkle}` : 'border-cream/15 bg-cream/[0.025]'}`}
+              className={`group grid min-h-[110px] w-full cursor-pointer grid-cols-[1.875rem_1fr_1.25rem] items-center gap-2.5 border px-3 py-3 text-left leading-relaxed text-cream transition duration-200 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-accent/[0.07] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent max-sm:grid-cols-[1fr_auto] max-sm:grid-rows-[auto_1fr] max-sm:items-start sm:min-h-[96px] sm:grid-cols-[2.125rem_1fr_1.25rem] sm:gap-3 sm:px-4 ${styles.pathChoice} ${isSelected ? `border-accent bg-accent/10 shadow-[inset_3px_0_0_var(--color-accent)] ${styles.twinkle}` : 'border-cream/15 bg-cream/[0.025]'}`}
               type="button"
               key={answer.id}
               onClick={() => onSelect(answer.id)}
               aria-pressed={isSelected}
               aria-keyshortcuts={String(index + 1)}
             >
-              <span className={`grid size-[30px] place-items-center border font-mono text-sm ${isSelected ? 'border-accent text-accent' : 'border-cream/20 text-muted'}`}>
+              <span className={`grid size-[30px] place-items-center border font-mono text-sm max-sm:row-start-1 ${isSelected ? 'border-accent text-accent' : 'border-cream/20 text-muted'}`}>
                 {isSelected ? <Check size={17} aria-hidden="true" /> : `0${index + 1}`}
               </span>
-              <span>{answer.text}</span>
-              <span className={`text-muted transition duration-200 ${isSelected ? 'translate-x-0 opacity-100' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100'}`} aria-hidden="true">
+              <span className="max-sm:col-span-2 max-sm:row-start-2">{answer.text}</span>
+              <span className={`text-muted transition duration-200 max-sm:col-start-2 max-sm:row-start-1 ${isSelected ? 'translate-x-0 opacity-100' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100'}`} aria-hidden="true">
                 <ArrowRight size={17} />
               </span>
             </button>
@@ -143,14 +141,6 @@ export function QuestionCard({
         >
           <ArrowLeft size={16} aria-hidden="true" />
           {t('test.back')}
-        </button>
-        <button
-          className="inline-flex min-h-12 cursor-pointer items-center justify-center gap-2 bg-transparent text-sm font-semibold text-muted transition hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          type="button"
-          onClick={onReset}
-        >
-          <RotateCcw size={15} aria-hidden="true" />
-          {t('test.reset')}
         </button>
       </div>
       <p className="mb-0 mt-5 text-center font-mono text-xs text-muted">{t('test.saveNote')}</p>

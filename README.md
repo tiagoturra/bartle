@@ -22,12 +22,14 @@ npm run preview
 
 No environment variables are required.
 
+Vercel's Content Security Policy allows Google Fonts from `fonts.gstatic.com` and embedded `data:` font resources.
+
 ## Editing the Test
 
 Edit [`src/modules/bartle/data/test.config.json`](./src/modules/bartle/data/test.config.json) to change the player types, questions, answer choices, or scoring rules. Each answer has a `scores` object whose keys are player type IDs and whose values are the points awarded for selecting that answer. The current results divide each type's earned points by the total points earned and display the result as a percentage.
 
 Use [`src/i18n/locales/en-US/common.json`](./src/i18n/locales/en-US/common.json) for interface labels and player-type descriptions.
-Translated interface text is in `src/i18n/locales/{pt-BR,fr-FR,de-DE}/common.json`. Question and answer translations live in each locale's `questions.json`; scoring rules and stable question IDs remain in `src/modules/bartle/data/test.config.json`. Use the fixed-width language selector in the page header to switch between English, Portuguese, French, and German.
+Translated interface text is in `src/i18n/locales/{pt-BR,fr-FR,de-DE}/common.json`. Question and answer translations live in each locale's `questions.json`; scoring rules and stable question IDs remain in `src/modules/bartle/data/test.config.json`. Use the language selector in the page header on desktop or the hamburger menu on mobile to switch between English, Portuguese, French, and German.
 
 The UI uses Tailwind utility classes for standard layout, spacing, typography, colors, and responsive styling. Component Sass modules are reserved for bespoke visual effects and animation.
 

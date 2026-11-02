@@ -2,10 +2,13 @@ import {
   ChevronDown,
   Compass,
   Feather,
+  Menu,
+  RotateCcw,
   Sparkles,
   Swords,
   Trophy,
   Users,
+  X,
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -153,6 +156,7 @@ export function BartlePage() {
     restoredProgress.advanceOnSelection,
   )
   const [storageError, setStorageError] = useState(restoredProgress.storageError)
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false)
   const currentQuestion = testConfig.questions[currentIndex]
 
   function startTest() {
@@ -215,7 +219,7 @@ export function BartlePage() {
   }, [advanceOnSelection, answers, currentIndex, phase])
 
   return (
-    <main className={`relative min-h-dvh overflow-hidden bg-forest text-cream ${styles.pageBackdrop}`}>
+    <main className={`relative flex min-h-dvh flex-col overflow-hidden bg-forest text-cream ${styles.pageBackdrop}`}>
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         <span className={`absolute right-[-14%] top-[10%] aspect-square w-[min(60vw,780px)] rounded-full ${styles.ambientOrb}`} />
         <span className={styles.constellation} />
@@ -237,7 +241,18 @@ export function BartlePage() {
         <span className="ml-auto hidden font-mono tracking-[0.1em] text-muted md:inline text-xs">{t('nav.edition')}</span>
         <span className="hidden h-3.5 w-px bg-cream/20 md:block" />
         <span className="hidden font-mono text-xs tracking-[0.1em] text-accent sm:inline">{t('nav.fieldGuide')}</span>
-        <label className="relative w-36 shrink-0">
+        {phase === 'test' && (
+          <button
+            className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center gap-2 border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto sm:px-3"
+            type="button"
+            onClick={resetTest}
+            aria-label={t('test.reset')}
+          >
+            <RotateCcw size={15} aria-hidden="true" />
+            <span className="sr-only sm:not-sr-only">{t('test.reset')}</span>
+          </button>
+        )}
+        <label className="relative hidden w-36 shrink-0 md:block">
           <span className="sr-only">{t('nav.language')}</span>
           <select
             className="h-10 w-36 cursor-pointer appearance-none border border-cream/20 bg-panel px-3 pr-9 font-sans text-sm text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -257,6 +272,44 @@ export function BartlePage() {
             aria-hidden="true"
           />
         </label>
+        <button
+          className="ml-auto inline-flex size-10 shrink-0 cursor-pointer items-center justify-center border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:ml-0 md:hidden"
+          type="button"
+          aria-label={t('nav.language')}
+          aria-expanded={languageMenuOpen}
+          aria-controls="mobile-language-menu"
+          onClick={() => setLanguageMenuOpen((isOpen) => !isOpen)}
+        >
+          {languageMenuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
+        </button>
+        {languageMenuOpen && (
+          <div
+            className="absolute right-4 top-full z-30 border border-cream/15 bg-panel p-3 shadow-xl md:hidden"
+            id="mobile-language-menu"
+          >
+            <label className="relative block w-40">
+              <span className="sr-only">{t('nav.language')}</span>
+              <select
+                className="h-10 w-full cursor-pointer appearance-none border border-cream/20 bg-forest px-3 pr-9 font-sans text-sm text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                value={i18n.resolvedLanguage ?? i18n.language}
+                onChange={(event) => {
+                  void i18n.changeLanguage(event.target.value)
+                  setLanguageMenuOpen(false)
+                }}
+              >
+                <option value="en-US">English</option>
+                <option value="pt-BR">Português</option>
+                <option value="fr-FR">Français</option>
+                <option value="de-DE">Deutsch</option>
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted"
+                size={16}
+                aria-hidden="true"
+              />
+            </label>
+          </div>
+        )}
       </header>
 
       {storageError && (
@@ -265,7 +318,7 @@ export function BartlePage() {
         </p>
       )}
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 md:px-8">
         {phase === 'intro' && (
           <section className="grid min-h-[calc(100dvh-5rem)] grid-cols-1 items-center gap-4 py-14 md:grid-cols-[1.04fr_0.96fr] md:gap-0 md:py-12">
             <div className={`relative z-10 pb-0 md:pb-10 md:pl-[5.5%] ${styles.heroCopy}`}>
@@ -337,7 +390,7 @@ export function BartlePage() {
         )}
 
         {phase === 'test' && currentQuestion && (
-          <div className="flex min-h-[calc(100dvh-5rem)] items-center justify-center py-9 md:py-[70px]">
+          <div className="flex flex-1 items-center justify-center py-9 md:py-[70px]">
             <QuestionCard
               key={currentQuestion.id}
               question={{
@@ -352,7 +405,6 @@ export function BartlePage() {
               questionCount={testConfig.questions.length}
               selectedAnswer={answers[currentQuestion.id]}
               isFirst={currentIndex === 0}
-              onReset={resetTest}
               onSelect={(answerId) => {
                 setAnswers((previous) => ({
                   ...previous,
@@ -369,7 +421,7 @@ export function BartlePage() {
         )}
 
         {phase === 'results' && scores && (
-          <div className="flex min-h-[calc(100dvh-5rem)] items-center justify-center py-9 md:py-[70px]">
+          <div className="flex flex-1 items-center justify-center py-9 md:py-[70px]">
             <ResultsPanel scores={scores} onRestart={startTest} />
           </div>
         )}
