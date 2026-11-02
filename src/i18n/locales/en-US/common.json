@@ -43,9 +43,9 @@
     "scoreNote": "Each choice adds one point to a player type. Percentages show how your choices were distributed.",
     "points": "{{count}} pts",
     "retake": "Play again",
-    "share": "Copy result",
+    "share": "Copy image",
     "copied": "Copied",
-    "copyError": "Could not copy the result. Please try again.",
+    "copyError": "Could not create or copy the results image. Please try again and allow clipboard access.",
     "acknowledgement": "Inspired by Richard Bartle’s player-type taxonomy and the referenced Bartle test. This version uses an original set of questions."
   },
   "types": {

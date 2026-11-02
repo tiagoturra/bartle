@@ -43,9 +43,9 @@
     "scoreNote": "Jede Entscheidung bringt einem Spielertyp einen Punkt. Die Prozentwerte zeigen die Verteilung deiner Entscheidungen.",
     "points": "{{count}} Pkt.",
     "retake": "Nochmal spielen",
-    "share": "Ergebnis kopieren",
+    "share": "Bild kopieren",
     "copied": "Kopiert",
-    "copyError": "Das Ergebnis konnte nicht kopiert werden. Bitte versuche es erneut.",
+    "copyError": "Das Ergebnisbild konnte nicht erstellt oder kopiert werden. Bitte erneut versuchen und den Zugriff auf die Zwischenablage erlauben.",
     "acknowledgement": "Inspiriert von Richard Bartles Spielertypen-Taxonomie und dem genannten Bartle-Test. Diese Version verwendet eigene Fragen."
   },
   "types": {

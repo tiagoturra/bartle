@@ -43,9 +43,9 @@
     "scoreNote": "Cada escolha adiciona um ponto a um tipo de jogador. As porcentagens mostram como suas escolhas se distribuíram.",
     "points": "{{count}} pts",
     "retake": "Jogar novamente",
-    "share": "Copiar resultado",
+    "share": "Copiar imagem",
     "copied": "Copiado",
-    "copyError": "Não foi possível copiar o resultado. Tente novamente.",
+    "copyError": "Não foi possível criar ou copiar a imagem do resultado. Tente novamente e permita o acesso à área de transferência.",
     "acknowledgement": "Inspirado na taxonomia de tipos de jogador de Richard Bartle e no teste Bartle mencionado. Esta versão usa perguntas originais."
   },
   "types": {
