@@ -1,6 +1,9 @@
 import { ArrowLeft, ArrowRight, Check, RotateCcw } from 'lucide-react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { Question } from '../types'
+import { Crossroads } from './Crossroads'
+import type { TravelerDirection } from './Traveler'
 import styles from './QuestionCard.module.scss'
 
 interface QuestionCardProps {
@@ -26,6 +29,52 @@ export function QuestionCard({
 }: QuestionCardProps) {
   const { t } = useTranslation()
   const progress = ((questionIndex + 1) / questionCount) * 100
+  const selectedAnswerIndex = question.answers.findIndex(
+    ({ id }) => id === selectedAnswer,
+  )
+  const selectedPath: TravelerDirection | undefined =
+    selectedAnswerIndex === 0
+      ? 'left'
+      : selectedAnswerIndex === 1
+        ? 'right'
+        : undefined
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (
+        event.defaultPrevented ||
+        event.repeat ||
+        event.isComposing ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey
+      ) {
+        return
+      }
+
+      const target = event.target
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest('input, textarea, select, [role="textbox"]'))
+      ) {
+        return
+      }
+
+      if (!/^[1-9]$/.test(event.key)) return
+
+      const answerIndex = Number(event.key) - 1
+      const answer = question.answers[answerIndex]
+      if (!answer) return
+
+      event.preventDefault()
+      onSelect(answer.id)
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [onSelect, question.answers])
 
   return (
     <section className={`mx-auto w-full max-w-3xl border border-cream/10 bg-panel p-5 shadow-2xl sm:p-8 lg:p-12 ${styles.card}`} aria-labelledby="question-prompt">
@@ -54,19 +103,24 @@ export function QuestionCard({
         {question.prompt}
       </h1>
 
-      <div className="grid gap-3">
+      <Crossroads
+        selectedPath={selectedPath}
+        label={t('test.crossroadsDescription')}
+        choicesClassName={styles.pathChoices}
+      >
         {question.answers.map((answer, index) => {
           const isSelected = selectedAnswer === answer.id
 
           return (
             <button
-              className={`group grid min-h-[76px] w-full cursor-pointer grid-cols-[2.125rem_1fr_1.25rem] items-center gap-3 border px-3.5 py-3.5 text-left leading-relaxed text-cream transition duration-200 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-accent/[0.07] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[84px] sm:grid-cols-[2.375rem_1fr_1.25rem] sm:gap-4 sm:px-5 sm:py-[18px] ${isSelected ? `border-accent bg-accent/10 shadow-[inset_3px_0_0_var(--color-accent)] ${styles.twinkle}` : 'border-cream/15 bg-cream/[0.025]'}`}
+              className={`group grid min-h-[110px] w-full cursor-pointer grid-cols-[1.875rem_1fr_1.25rem] items-center gap-2.5 border px-3 py-3 text-left leading-relaxed text-cream transition duration-200 hover:-translate-y-0.5 hover:border-accent/60 hover:bg-accent/[0.07] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[96px] sm:grid-cols-[2.125rem_1fr_1.25rem] sm:gap-3 sm:px-4 ${styles.pathChoice} ${isSelected ? `border-accent bg-accent/10 shadow-[inset_3px_0_0_var(--color-accent)] ${styles.twinkle}` : 'border-cream/15 bg-cream/[0.025]'}`}
               type="button"
               key={answer.id}
               onClick={() => onSelect(answer.id)}
               aria-pressed={isSelected}
+              aria-keyshortcuts={String(index + 1)}
             >
-              <span className={`grid size-[34px] place-items-center border font-mono text-xs ${isSelected ? 'border-accent text-accent' : 'border-cream/20 text-muted'}`}>
+              <span className={`grid size-[30px] place-items-center border font-mono text-sm ${isSelected ? 'border-accent text-accent' : 'border-cream/20 text-muted'}`}>
                 {isSelected ? <Check size={17} aria-hidden="true" /> : `0${index + 1}`}
               </span>
               <span>{answer.text}</span>
@@ -76,7 +130,9 @@ export function QuestionCard({
             </button>
           )
         })}
-      </div>
+      </Crossroads>
+
+      <p className="mb-0 mt-3 text-center font-mono text-xs text-accent">{t('test.keyboardHint')}</p>
 
       <div className="mt-8 flex min-h-12 flex-wrap items-center justify-between gap-3">
         <button

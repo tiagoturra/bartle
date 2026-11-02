@@ -209,7 +209,7 @@ export function BartlePage() {
       }
 
       setAdvanceOnSelection(false)
-    }, 650)
+    }, 800)
 
     return () => window.clearTimeout(timeout)
   }, [advanceOnSelection, answers, currentIndex, phase])

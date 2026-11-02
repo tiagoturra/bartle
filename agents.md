@@ -96,11 +96,12 @@ project-root/
 
 ## 3.1 Reusable Component Architecture
 
-1. **Composition first:** Prefer composing pages from reusable components over implementing structural UI directly in a page. Repeated or broadly applicable elements such as `Header`, `Footer`, navigation, theme controls, language selectors, buttons, cards, inputs, and section wrappers must be extracted into appropriately scoped components.
+1. **Composition first:** Always compose pages from reusable components over implementing structural UI directly in a page. Repeated or broadly applicable elements such as `Header`, `Footer`, navigation, theme controls, language selectors, buttons, cards, inputs, and section wrappers must be extracted into appropriately scoped components.
 2. **Placement:** Domain-agnostic components belong in `src/design-system/components/`; components reused only within a business domain belong in that domain's `components/` directory. Pages should focus on orchestration, content composition, and module-specific state.
 3. **Single responsibility:** A reusable component must have one clear UI responsibility, a typed public API, and no dependency on a specific page unless it is explicitly domain-scoped.
 4. **Avoid premature abstraction:** Keep one-off visual details within their owning component. Extract a component when it is reused, represents a meaningful interface unit, or is likely to be independently maintained.
 5. **Consistency:** Before creating a new component, inspect the design system and relevant module for an existing component that can be reused or extended.
+6. Each component should have its own folder instead of dumping everything into `src/components`.
 
 ## 3.2 Routes and Browser Helpers
 
