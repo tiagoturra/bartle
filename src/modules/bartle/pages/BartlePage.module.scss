@@ -1,0 +1,243 @@
+.pageBackdrop {
+  background-image: radial-gradient(ellipse at 52% 32%, rgba(69, 92, 63, 0.14), transparent 39%);
+}
+
+.ambientOrb {
+  border: 1px solid rgba(202, 211, 179, 0.045);
+  box-shadow:
+    0 0 0 60px rgba(202, 211, 179, 0.018),
+    0 0 0 120px rgba(202, 211, 179, 0.012);
+}
+
+.constellation {
+  position: absolute;
+  top: 13%;
+  right: 12%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow:
+    -290px 96px 0 1px rgba(202, 211, 179, 0.5),
+    -160px 238px 0 0 rgba(202, 211, 179, 0.5),
+    90px 330px 0 1px rgba(202, 211, 179, 0.4),
+    -460px 390px 0 0 rgba(202, 211, 179, 0.55),
+    -300px 620px 0 1px rgba(202, 211, 179, 0.4);
+  opacity: 0.55;
+}
+
+.heroCopy {
+  animation: copy-appear 700ms ease-out both;
+
+  @keyframes copy-appear {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.heroArt {
+  animation: art-appear 900ms 100ms ease-out both;
+
+  @keyframes art-appear {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(202, 211, 179, 0.13);
+  border-radius: 50%;
+}
+
+.orbitOuter {
+  inset: 7%;
+  animation: slow-turn 70s linear infinite;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--color-accent);
+    background: var(--color-forest);
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    top: 14%;
+    left: 18%;
+  }
+
+  &::after {
+    right: 12%;
+    bottom: 23%;
+  }
+}
+
+.orbitInner {
+  inset: 19%;
+  border-style: dashed;
+  border-color: rgba(202, 211, 179, 0.15);
+  animation: slow-turn 90s linear infinite reverse;
+}
+
+@keyframes slow-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.artHalo {
+  position: absolute;
+  width: 54%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(145, 183, 147, 0.12), transparent 70%);
+  filter: blur(2px);
+  animation: halo-pulse 5s ease-in-out infinite;
+
+  @keyframes halo-pulse {
+    50% {
+      opacity: 0.58;
+      transform: scale(0.94);
+    }
+  }
+}
+
+.artCore {
+  position: relative;
+  display: grid;
+  width: 38%;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(202, 211, 179, 0.32);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #314438, #1d2b22 72%);
+  box-shadow:
+    0 0 0 12px rgba(202, 211, 179, 0.025),
+    0 20px 65px rgba(3, 10, 6, 0.2);
+}
+
+.compassRose {
+  position: relative;
+  display: grid;
+  width: 75%;
+  aspect-ratio: 1;
+  place-items: center;
+  color: var(--color-accent);
+
+  svg {
+    opacity: 0.88;
+    animation: compass-glow 4s ease-in-out infinite;
+  }
+}
+
+@keyframes compass-glow {
+  50% {
+    opacity: 0.55;
+    transform: rotate(5deg);
+  }
+}
+
+.roseNorth,
+.roseSouth,
+.roseEast,
+.roseWest {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 18%;
+  background: rgba(202, 211, 179, 0.55);
+}
+
+.roseNorth {
+  top: -18%;
+  left: 50%;
+}
+
+.roseSouth {
+  bottom: -18%;
+  left: 50%;
+}
+
+.roseEast {
+  top: 50%;
+  right: -18%;
+  transform: rotate(90deg);
+}
+
+.roseWest {
+  top: 50%;
+  left: -18%;
+  transform: rotate(90deg);
+}
+
+.typeMark {
+  position: absolute;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(202, 211, 179, 0.22);
+  background: rgba(29, 43, 34, 0.94);
+  color: var(--color-accent);
+  animation: mark-float 5s ease-in-out infinite;
+}
+
+@keyframes mark-float {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.markSocial {
+  top: 16%;
+  left: 30%;
+  animation-delay: -1s;
+}
+
+.markExplore {
+  top: 30%;
+  right: 13%;
+  animation-delay: -2.2s;
+}
+
+.markAchieve {
+  right: 29%;
+  bottom: 13%;
+  animation-delay: -3.1s;
+}
+
+.markKiller {
+  bottom: 29%;
+  left: 12%;
+  animation-delay: -0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroCopy,
+  .heroArt,
+  .orbitOuter,
+  .orbitInner,
+  .artHalo,
+  .compassRose svg,
+  .typeMark {
+    animation: none;
+  }
+}

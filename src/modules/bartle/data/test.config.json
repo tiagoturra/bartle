@@ -1,0 +1,271 @@
+{
+  "scoring": {
+    "method": "percentage-of-earned-points",
+    "answerRule": "Award each selected answer the points listed for its player type.",
+    "normalizationRule": "Divide each player type's points by all points earned, then multiply by 100."
+  },
+  "categories": [
+    {
+      "id": "socialiser",
+      "icon": "users",
+      "color": "teal"
+    },
+    {
+      "id": "explorer",
+      "icon": "compass",
+      "color": "sage"
+    },
+    {
+      "id": "achiever",
+      "icon": "trophy",
+      "color": "gold"
+    },
+    {
+      "id": "killer",
+      "icon": "swords",
+      "color": "rust"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "prompt": "At the end of a long quest, what would make the night memorable?",
+      "answers": [
+        { "id": "a", "text": "Retelling the best moments around a campfire", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "Finding a place no one in your party has seen", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q02",
+      "prompt": "You discover an unmarked door beneath the city. What draws you in?",
+      "answers": [
+        { "id": "a", "text": "The mystery of what might be behind it", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "The chance to claim a rare reward inside", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q03",
+      "prompt": "A rival challenges you in the town square. What sounds best?",
+      "answers": [
+        { "id": "a", "text": "A contest where everyone can see who wins", "scores": { "killer": 1 } },
+        { "id": "b", "text": "A friendly crowd cheering both of you on", "scores": { "socialiser": 1 } }
+      ]
+    },
+    {
+      "id": "q04",
+      "prompt": "Your map has room for one more marker. What do you mark?",
+      "answers": [
+        { "id": "a", "text": "A shortcut through a region you just uncovered", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "The location of a powerful piece of gear", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q05",
+      "prompt": "What would you most like other players to remember about you?",
+      "answers": [
+        { "id": "a", "text": "That you were always there when they needed a friend", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "That no one could best you in a showdown", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q06",
+      "prompt": "You have an evening free in your favorite game. Where do you go?",
+      "answers": [
+        { "id": "a", "text": "To a lively gathering where everyone knows your name", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "To the far edge of the map, just to see what’s there", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q07",
+      "prompt": "A new season begins. What gives you the biggest spark?",
+      "answers": [
+        { "id": "a", "text": "A fresh challenge with a clear milestone to reach", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "A chance to test yourself against new rivals", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q08",
+      "prompt": "What makes a game world feel truly alive to you?",
+      "answers": [
+        { "id": "a", "text": "The people who fill its streets and tell their stories", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "The places and secrets waiting beyond the road", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q09",
+      "prompt": "Your guild is deciding what to celebrate. Which feels right?",
+      "answers": [
+        { "id": "a", "text": "A night spent together after a hard-won victory", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "A record-breaking feat that puts your guild on the map", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "prompt": "You find a hidden chamber filled with strange inscriptions. You…",
+      "answers": [
+        { "id": "a", "text": "Stay to piece together what happened there", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "Look for a difficult challenge worth conquering", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "prompt": "Which kind of story would you rather be part of?",
+      "answers": [
+        { "id": "a", "text": "A group of friends making their own traditions", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "A feud where every encounter raises the stakes", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "prompt": "A strange landmark appears on your compass. Your first thought?",
+      "answers": [
+        { "id": "a", "text": "Who built it, and why is it out here?", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "What feat do I need to accomplish to reach it?", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q13",
+      "prompt": "What makes you feel most at home in an online world?",
+      "answers": [
+        { "id": "a", "text": "A close-knit circle to laugh and adventure with", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "A worthy opponent who keeps you on your toes", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q14",
+      "prompt": "Which discovery would you tell your friends about first?",
+      "answers": [
+        { "id": "a", "text": "A secret route through a familiar place", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "A personal best you worked hard to achieve", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q15",
+      "prompt": "At a busy crossroads, what catches your attention?",
+      "answers": [
+        { "id": "a", "text": "A player looking for someone to join their journey", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "A tournament about to begin in the arena", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q16",
+      "prompt": "Which keeps you playing long after you meant to log off?",
+      "answers": [
+        { "id": "a", "text": "One more conversation with the people you’ve met", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "One more stretch of the world left unexplored", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q17",
+      "prompt": "You can earn one title for your character. Which do you choose?",
+      "answers": [
+        { "id": "a", "text": "A title that proves you mastered a hard challenge", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "A title earned by defeating a famous rival", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q18",
+      "prompt": "A friend asks what you love most about your current game.",
+      "answers": [
+        { "id": "a", "text": "The friendships that have grown there", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "The unexpected things you keep discovering", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q19",
+      "prompt": "What kind of progress feels most satisfying?",
+      "answers": [
+        { "id": "a", "text": "Understanding a place that once felt mysterious", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "Seeing your skill reflected in a new achievement", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q20",
+      "prompt": "Your team has one open spot. Who do you hope joins?",
+      "answers": [
+        { "id": "a", "text": "Someone who makes every journey more fun", "scores": { "socialiser": 1 } },
+        { "id": "b", "text": "Someone eager to take on a fierce rival", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q21",
+      "prompt": "Which would you explore first in a newly opened region?",
+      "answers": [
+        { "id": "a", "text": "The side paths that don’t appear on the main map", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "The challenges that award the rarest distinction", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q22",
+      "prompt": "A rival has beaten you once. What motivates you most?",
+      "answers": [
+        { "id": "a", "text": "Learning the region better before your next encounter", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "Meeting them again and taking the win", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q23",
+      "prompt": "How do you like to spend time between major quests?",
+      "answers": [
+        { "id": "a", "text": "Wandering somewhere you’ve never been", "scores": { "explorer": 1 } },
+        { "id": "b", "text": "Improving a skill until you can do it flawlessly", "scores": { "achiever": 1 } }
+      ]
+    },
+    {
+      "id": "q24",
+      "prompt": "What would make a legendary duel worth remembering?",
+      "answers": [
+        { "id": "a", "text": "Outsmarting a rival in a close, fair match", "scores": { "killer": 1 } },
+        { "id": "b", "text": "The strange, forgotten place where it took place", "scores": { "explorer": 1 } }
+      ]
+    },
+    {
+      "id": "q25",
+      "prompt": "What do you enjoy most about learning a new game?",
+      "answers": [
+        { "id": "a", "text": "Finding the systems that reward careful practice", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "Seeing how other players react under pressure", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q26",
+      "prompt": "Which brag would you be prouder to share?",
+      "answers": [
+        { "id": "a", "text": "A rare piece of gear you earned through persistence", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "A close match you won against a fierce challenger", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q27",
+      "prompt": "A difficult mission is finally complete. What next?",
+      "answers": [
+        { "id": "a", "text": "Set a bigger goal and work toward it", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "Find another player ready for a contest", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q28",
+      "prompt": "Which reward would you choose for a season well played?",
+      "answers": [
+        { "id": "a", "text": "A rank that shows how much you accomplished", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "A reputation that makes challengers think twice", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q29",
+      "prompt": "When you look back on a game, which moment stands out?",
+      "answers": [
+        { "id": "a", "text": "The milestone you thought you’d never reach", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "The one-on-one match you still talk about", "scores": { "killer": 1 } }
+      ]
+    },
+    {
+      "id": "q30",
+      "prompt": "What would you rather be known for in your favorite world?",
+      "answers": [
+        { "id": "a", "text": "Always finishing what you set out to do", "scores": { "achiever": 1 } },
+        { "id": "b", "text": "Never backing down from a worthy opponent", "scores": { "killer": 1 } }
+      ]
+    }
+  ]
+}

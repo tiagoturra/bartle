@@ -1,0 +1,86 @@
+{
+  "brand": "O Salão da Guilda",
+  "nav": {
+    "fieldGuide": "GUIA DO JOGADOR",
+    "edition": "ARQUÉTIPOS DE JOGADOR · VOL. 01",
+    "language": "Idioma"
+  },
+  "intro": {
+    "eyebrow": "Um guia pelos mundos que jogamos",
+    "artCaption": "FIG. 01 · A BÚSSOLA DO JOGADOR",
+    "titleStart": "Que tipo de",
+    "titleAccent": "jogador",
+    "titleEnd": "é você?",
+    "description": "Cada aventureiro entra em um mundo por um motivo diferente. Siga seus instintos em 30 escolhas e descubra o que torna seu jeito de jogar único.",
+    "begin": "Começar sua jornada",
+    "footnote": "Não há respostas erradas. Só o seu jeito de jogar.",
+    "stats": {
+      "choices": "escolhas",
+      "time": "minutos",
+      "types": "tipos de jogador"
+    },
+    "typesLabel": "QUATRO JEITOS DE JOGAR",
+    "scroll": "SUA JORNADA COMEÇA AQUI"
+  },
+  "test": {
+    "chapter": "A JORNADA",
+    "choice": "ESCOLHA",
+    "of": "DE",
+    "prompt": "Escolha o caminho que mais combina com você.",
+    "back": "Anterior",
+    "reset": "Reiniciar teste",
+    "storageError": "Não foi possível salvar ou restaurar seu progresso nesta sessão do navegador.",
+    "saveNote": "Seu progresso fica salvo nesta aba. Reinicie o teste para começar de novo."
+  },
+  "results": {
+    "eyebrow": "SEU PERFIL DE JOGADOR",
+    "title": "O caminho que você cria",
+    "description": "Não existe um único jeito de fazer parte de um mundo. Veja o que suas escolhas revelam sobre o seu.",
+    "strongest": "SEU INSTINTO MAIS FORTE",
+    "scoreBreakdown": "Sua combinação de estilos",
+    "scoreNote": "Cada escolha adiciona um ponto a um tipo de jogador. As porcentagens mostram como suas escolhas se distribuíram.",
+    "points": "{{count}} pts",
+    "retake": "Jogar novamente",
+    "share": "Copiar resultado",
+    "copied": "Copiado",
+    "copyError": "Não foi possível copiar o resultado. Tente novamente.",
+    "acknowledgement": "Inspirado na taxonomia de tipos de jogador de Richard Bartle e no teste Bartle mencionado. Esta versão usa perguntas originais."
+  },
+  "types": {
+    "socialiser": {
+      "name": "Socializador",
+      "short": "Quem cultiva amizades",
+      "description": "Para você, o mundo ganha vida por meio das pessoas. Histórias compartilhadas, rostos conhecidos e os laços criados pelo caminho são a verdadeira aventura."
+    },
+    "explorer": {
+      "name": "Explorador",
+      "short": "O cartógrafo curioso",
+      "description": "Você joga para descobrir o que existe além do óbvio. Detalhes escondidos, histórias não contadas e a alegria de compreender um mundo levam você adiante."
+    },
+    "achiever": {
+      "name": "Conquistador",
+      "short": "O aventureiro determinado",
+      "description": "Uma meta clara dá sentido à sua jornada. Você gosta de dominar desafios, progredir e descobrir até onde a dedicação pode levar."
+    },
+    "killer": {
+      "name": "Predador",
+      "short": "A força da natureza",
+      "description": "Você prospera em confrontos intensos e marcantes. A competição prende sua atenção, e você gosta de testar sua habilidade contra outros jogadores."
+    }
+  },
+  "accessibility": {
+    "progress": "Progresso do teste",
+    "selected": "Selecionada",
+    "score": "Pontuação de {{name}}: {{score}} por cento"
+  },
+  "about": {
+    "index": "NOTA DE CAMPO / 01",
+    "description": "A taxonomia de Bartle descreve quatro motivos que atraem as pessoas para mundos multiplayer: pessoas, descobertas, conquistas e competição. A maioria dos jogadores combina vários deles.",
+    "source": "Novas escolhas inspiradas na",
+    "sourceLink": "taxonomia de Richard Bartle"
+  },
+  "footer": {
+    "brand": "O SALÃO DA GUILDA",
+    "tagline": "UMA EXPLORAÇÃO DO JOGO"
+  }
+}

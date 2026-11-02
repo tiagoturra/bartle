@@ -1,0 +1,86 @@
+{
+  "brand": "The Guildhall",
+  "nav": {
+    "fieldGuide": "FIELD GUIDE",
+    "edition": "PLAYER ARCHETYPES · VOL. 01",
+    "language": "Language"
+  },
+  "intro": {
+    "eyebrow": "A field guide to the worlds we play",
+    "artCaption": "FIG. 01 · THE PLAYER’S COMPASS",
+    "titleStart": "What kind of",
+    "titleAccent": "player",
+    "titleEnd": "are you?",
+    "description": "Every adventurer enters a world for a different reason. Follow your instincts through 30 choices and discover what makes your kind of play.",
+    "begin": "Begin your story",
+    "footnote": "No wrong answers. Just your way of playing.",
+    "stats": {
+      "choices": "30 choices",
+      "time": "5 minutes",
+      "types": "4 player types"
+    },
+    "typesLabel": "FOUR WAYS TO PLAY",
+    "scroll": "YOUR STORY STARTS HERE"
+  },
+  "test": {
+    "chapter": "THE JOURNEY",
+    "choice": "CHOICE",
+    "of": "OF",
+    "prompt": "Choose the path that feels more like you.",
+    "back": "Previous",
+    "reset": "Reset test",
+    "storageError": "Your progress could not be saved or restored in this browser session.",
+    "saveNote": "Progress is saved in this tab. Reset test to start over."
+  },
+  "results": {
+    "eyebrow": "YOUR PLAYER PROFILE",
+    "title": "The path you make",
+    "description": "There’s no single way to belong in a world. Here’s what your choices say about yours.",
+    "strongest": "YOUR STRONGEST INSTINCT",
+    "scoreBreakdown": "Your playstyle mix",
+    "scoreNote": "Each choice adds one point to a player type. Percentages show how your choices were distributed.",
+    "points": "{{count}} pts",
+    "retake": "Play again",
+    "share": "Copy result",
+    "copied": "Copied",
+    "copyError": "Could not copy the result. Please try again.",
+    "acknowledgement": "Inspired by Richard Bartle’s player-type taxonomy and the referenced Bartle test. This version uses an original set of questions."
+  },
+  "types": {
+    "socialiser": {
+      "name": "Socialiser",
+      "short": "The company keeper",
+      "description": "For you, the world comes alive through its people. Shared stories, familiar faces, and the bonds built along the way are the real adventure."
+    },
+    "explorer": {
+      "name": "Explorer",
+      "short": "The curious cartographer",
+      "description": "You play to discover what lies beyond the obvious. Hidden details, untold histories, and the joy of understanding a world pull you forward."
+    },
+    "achiever": {
+      "name": "Achiever",
+      "short": "The purposeful adventurer",
+      "description": "A clear goal gives your journey meaning. You enjoy mastering a challenge, earning progress, and seeing how far dedication can take you."
+    },
+    "killer": {
+      "name": "Killer",
+      "short": "The force of nature",
+      "description": "You thrive on impact and high-stakes encounters. Competition is compelling, and you enjoy testing your skill against another player."
+    }
+  },
+  "accessibility": {
+    "progress": "Test progress",
+    "selected": "Selected",
+    "score": "{{name}} score: {{score}} percent"
+  },
+  "about": {
+    "index": "FIELD NOTE / 01",
+    "description": "Bartle’s taxonomy describes four reasons people are drawn to multiplayer worlds: people, discovery, accomplishment, and competition. Most players are a blend.",
+    "source": "A new set of choices inspired by",
+    "sourceLink": "Richard Bartle’s taxonomy"
+  },
+  "footer": {
+    "brand": "THE GUILDHALL",
+    "tagline": "AN EXPLORATION OF PLAY"
+  }
+}

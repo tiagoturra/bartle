@@ -1,0 +1,212 @@
+{
+  "q01": {
+    "prompt": "At the end of a long quest, what would make the night memorable?",
+    "answers": {
+      "a": "Retelling the best moments around a campfire",
+      "b": "Finding a place no one in your party has seen"
+    }
+  },
+  "q02": {
+    "prompt": "You discover an unmarked door beneath the city. What draws you in?",
+    "answers": {
+      "a": "The mystery of what might be behind it",
+      "b": "The chance to claim a rare reward inside"
+    }
+  },
+  "q03": {
+    "prompt": "A rival challenges you in the town square. What sounds best?",
+    "answers": {
+      "a": "A contest where everyone can see who wins",
+      "b": "A friendly crowd cheering both of you on"
+    }
+  },
+  "q04": {
+    "prompt": "Your map has room for one more marker. What do you mark?",
+    "answers": {
+      "a": "A shortcut through a region you just uncovered",
+      "b": "The location of a powerful piece of gear"
+    }
+  },
+  "q05": {
+    "prompt": "What would you most like other players to remember about you?",
+    "answers": {
+      "a": "That you were always there when they needed a friend",
+      "b": "That no one could best you in a showdown"
+    }
+  },
+  "q06": {
+    "prompt": "You have an evening free in your favorite game. Where do you go?",
+    "answers": {
+      "a": "To a lively gathering where everyone knows your name",
+      "b": "To the far edge of the map, just to see what’s there"
+    }
+  },
+  "q07": {
+    "prompt": "A new season begins. What gives you the biggest spark?",
+    "answers": {
+      "a": "A fresh challenge with a clear milestone to reach",
+      "b": "A chance to test yourself against new rivals"
+    }
+  },
+  "q08": {
+    "prompt": "What makes a game world feel truly alive to you?",
+    "answers": {
+      "a": "The people who fill its streets and tell their stories",
+      "b": "The places and secrets waiting beyond the road"
+    }
+  },
+  "q09": {
+    "prompt": "Your guild is deciding what to celebrate. Which feels right?",
+    "answers": {
+      "a": "A night spent together after a hard-won victory",
+      "b": "A record-breaking feat that puts your guild on the map"
+    }
+  },
+  "q10": {
+    "prompt": "You find a hidden chamber filled with strange inscriptions. You…",
+    "answers": {
+      "a": "Stay to piece together what happened there",
+      "b": "Look for a difficult challenge worth conquering"
+    }
+  },
+  "q11": {
+    "prompt": "Which kind of story would you rather be part of?",
+    "answers": {
+      "a": "A group of friends making their own traditions",
+      "b": "A feud where every encounter raises the stakes"
+    }
+  },
+  "q12": {
+    "prompt": "A strange landmark appears on your compass. Your first thought?",
+    "answers": {
+      "a": "Who built it, and why is it out here?",
+      "b": "What feat do I need to accomplish to reach it?"
+    }
+  },
+  "q13": {
+    "prompt": "What makes you feel most at home in an online world?",
+    "answers": {
+      "a": "A close-knit circle to laugh and adventure with",
+      "b": "A worthy opponent who keeps you on your toes"
+    }
+  },
+  "q14": {
+    "prompt": "Which discovery would you tell your friends about first?",
+    "answers": {
+      "a": "A secret route through a familiar place",
+      "b": "A personal best you worked hard to achieve"
+    }
+  },
+  "q15": {
+    "prompt": "At a busy crossroads, what catches your attention?",
+    "answers": {
+      "a": "A player looking for someone to join their journey",
+      "b": "A tournament about to begin in the arena"
+    }
+  },
+  "q16": {
+    "prompt": "Which keeps you playing long after you meant to log off?",
+    "answers": {
+      "a": "One more conversation with the people you’ve met",
+      "b": "One more stretch of the world left unexplored"
+    }
+  },
+  "q17": {
+    "prompt": "You can earn one title for your character. Which do you choose?",
+    "answers": {
+      "a": "A title that proves you mastered a hard challenge",
+      "b": "A title earned by defeating a famous rival"
+    }
+  },
+  "q18": {
+    "prompt": "A friend asks what you love most about your current game.",
+    "answers": {
+      "a": "The friendships that have grown there",
+      "b": "The unexpected things you keep discovering"
+    }
+  },
+  "q19": {
+    "prompt": "What kind of progress feels most satisfying?",
+    "answers": {
+      "a": "Understanding a place that once felt mysterious",
+      "b": "Seeing your skill reflected in a new achievement"
+    }
+  },
+  "q20": {
+    "prompt": "Your team has one open spot. Who do you hope joins?",
+    "answers": {
+      "a": "Someone who makes every journey more fun",
+      "b": "Someone eager to take on a fierce rival"
+    }
+  },
+  "q21": {
+    "prompt": "Which would you explore first in a newly opened region?",
+    "answers": {
+      "a": "The side paths that don’t appear on the main map",
+      "b": "The challenges that award the rarest distinction"
+    }
+  },
+  "q22": {
+    "prompt": "A rival has beaten you once. What motivates you most?",
+    "answers": {
+      "a": "Learning the region better before your next encounter",
+      "b": "Meeting them again and taking the win"
+    }
+  },
+  "q23": {
+    "prompt": "How do you like to spend time between major quests?",
+    "answers": {
+      "a": "Wandering somewhere you’ve never been",
+      "b": "Improving a skill until you can do it flawlessly"
+    }
+  },
+  "q24": {
+    "prompt": "What would make a legendary duel worth remembering?",
+    "answers": {
+      "a": "Outsmarting a rival in a close, fair match",
+      "b": "The strange, forgotten place where it took place"
+    }
+  },
+  "q25": {
+    "prompt": "What do you enjoy most about learning a new game?",
+    "answers": {
+      "a": "Finding the systems that reward careful practice",
+      "b": "Seeing how other players react under pressure"
+    }
+  },
+  "q26": {
+    "prompt": "Which brag would you be prouder to share?",
+    "answers": {
+      "a": "A rare piece of gear you earned through persistence",
+      "b": "A close match you won against a fierce challenger"
+    }
+  },
+  "q27": {
+    "prompt": "A difficult mission is finally complete. What next?",
+    "answers": {
+      "a": "Set a bigger goal and work toward it",
+      "b": "Find another player ready for a contest"
+    }
+  },
+  "q28": {
+    "prompt": "Which reward would you choose for a season well played?",
+    "answers": {
+      "a": "A rank that shows how much you accomplished",
+      "b": "A reputation that makes challengers think twice"
+    }
+  },
+  "q29": {
+    "prompt": "When you look back on a game, which moment stands out?",
+    "answers": {
+      "a": "The milestone you thought you’d never reach",
+      "b": "The one-on-one match you still talk about"
+    }
+  },
+  "q30": {
+    "prompt": "What would you rather be known for in your favorite world?",
+    "answers": {
+      "a": "Always finishing what you set out to do",
+      "b": "Never backing down from a worthy opponent"
+    }
+  }
+}

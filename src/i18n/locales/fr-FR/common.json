@@ -1,0 +1,86 @@
+{
+  "brand": "La Guilde",
+  "nav": {
+    "fieldGuide": "GUIDE DU JOUEUR",
+    "edition": "ARCHÉTYPES DE JOUEURS · VOL. 01",
+    "language": "Langue"
+  },
+  "intro": {
+    "eyebrow": "Un guide des mondes auxquels nous jouons",
+    "artCaption": "FIG. 01 · LA BOUSSOLE DU JOUEUR",
+    "titleStart": "Quel genre de",
+    "titleAccent": "joueur",
+    "titleEnd": "êtes-vous ?",
+    "description": "Chaque aventurier entre dans un monde pour une raison différente. Suivez votre instinct à travers 30 choix et découvrez ce qui caractérise votre façon de jouer.",
+    "begin": "Commencer votre aventure",
+    "footnote": "Il n’y a pas de mauvaise réponse. Seulement votre façon de jouer.",
+    "stats": {
+      "choices": "choix",
+      "time": "minutes",
+      "types": "types de joueurs"
+    },
+    "typesLabel": "QUATRE FAÇONS DE JOUER",
+    "scroll": "VOTRE HISTOIRE COMMENCE ICI"
+  },
+  "test": {
+    "chapter": "LE VOYAGE",
+    "choice": "CHOIX",
+    "of": "SUR",
+    "prompt": "Choisissez la voie qui vous ressemble le plus.",
+    "back": "Précédent",
+    "reset": "Réinitialiser le test",
+    "storageError": "Impossible d’enregistrer ou de restaurer votre progression dans cette session du navigateur.",
+    "saveNote": "Votre progression est enregistrée dans cet onglet. Réinitialisez le test pour recommencer."
+  },
+  "results": {
+    "eyebrow": "VOTRE PROFIL DE JOUEUR",
+    "title": "Le chemin que vous tracez",
+    "description": "Il n’existe pas une seule façon de trouver sa place dans un monde. Voici ce que vos choix révèlent sur la vôtre.",
+    "strongest": "VOTRE INSTINCT DOMINANT",
+    "scoreBreakdown": "Votre mélange de styles",
+    "scoreNote": "Chaque choix ajoute un point à un type de joueur. Les pourcentages montrent la répartition de vos choix.",
+    "points": "{{count}} pts",
+    "retake": "Rejouer",
+    "share": "Copier le résultat",
+    "copied": "Copié",
+    "copyError": "Impossible de copier le résultat. Veuillez réessayer.",
+    "acknowledgement": "Inspiré de la taxonomie des types de joueurs de Richard Bartle et du test Bartle cité. Cette version propose des questions originales."
+  },
+  "types": {
+    "socialiser": {
+      "name": "Socialiseur",
+      "short": "Le gardien des liens",
+      "description": "Pour vous, le monde prend vie grâce aux autres. Les histoires partagées, les visages familiers et les liens tissés en chemin sont la véritable aventure."
+    },
+    "explorer": {
+      "name": "Explorateur",
+      "short": "Le cartographe curieux",
+      "description": "Vous jouez pour découvrir ce qui se cache au-delà des apparences. Les détails secrets, les histoires oubliées et le plaisir de comprendre un monde vous attirent."
+    },
+    "achiever": {
+      "name": "Accomplisseur",
+      "short": "L’aventurier déterminé",
+      "description": "Un objectif clair donne un sens à votre aventure. Vous aimez relever des défis, progresser et découvrir jusqu’où votre détermination peut vous mener."
+    },
+    "killer": {
+      "name": "Combattant",
+      "short": "Une force de la nature",
+      "description": "Vous vous épanouissez dans les affrontements intenses et décisifs. La compétition vous passionne et vous aimez mesurer votre talent à celui des autres."
+    }
+  },
+  "accessibility": {
+    "progress": "Progression du test",
+    "selected": "Sélectionnée",
+    "score": "Score de {{name}} : {{score}} pour cent"
+  },
+  "about": {
+    "index": "NOTE DE TERRAIN / 01",
+    "description": "La taxonomie de Bartle décrit quatre raisons qui attirent les joueurs vers les mondes multijoueurs : les autres, la découverte, l’accomplissement et la compétition. La plupart des joueurs en combinent plusieurs.",
+    "source": "De nouveaux choix inspirés de la",
+    "sourceLink": "taxonomie de Richard Bartle"
+  },
+  "footer": {
+    "brand": "LA GUILDE",
+    "tagline": "UNE EXPLORATION DU JEU"
+  }
+}

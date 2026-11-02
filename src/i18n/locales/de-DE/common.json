@@ -1,0 +1,86 @@
+{
+  "brand": "Die Gildenhalle",
+  "nav": {
+    "fieldGuide": "SPIELERHANDBUCH",
+    "edition": "SPIELERTYPEN · AUSGABE 01",
+    "language": "Sprache"
+  },
+  "intro": {
+    "eyebrow": "Ein Wegweiser durch unsere Spielwelten",
+    "artCaption": "ABB. 01 · DER SPIELERKOMPASS",
+    "titleStart": "Was für ein",
+    "titleAccent": "Spieler",
+    "titleEnd": "bist du?",
+    "description": "Jede Abenteurerin und jeder Abenteurer betritt eine Welt aus einem anderen Grund. Folge bei 30 Entscheidungen deinem Instinkt und entdecke, was deine Spielweise ausmacht.",
+    "begin": "Dein Abenteuer beginnen",
+    "footnote": "Es gibt keine falschen Antworten. Nur deine Art zu spielen.",
+    "stats": {
+      "choices": "Entscheidungen",
+      "time": "Minuten",
+      "types": "Spielertypen"
+    },
+    "typesLabel": "VIER ARTEN ZU SPIELEN",
+    "scroll": "HIER BEGINNT DEINE GESCHICHTE"
+  },
+  "test": {
+    "chapter": "DIE REISE",
+    "choice": "FRAGE",
+    "of": "VON",
+    "prompt": "Wähle den Weg, der am besten zu dir passt.",
+    "back": "Zurück",
+    "reset": "Test zurücksetzen",
+    "storageError": "Dein Fortschritt konnte in dieser Browsersitzung nicht gespeichert oder wiederhergestellt werden.",
+    "saveNote": "Dein Fortschritt wird in diesem Tab gespeichert. Setze den Test zurück, um neu zu beginnen."
+  },
+  "results": {
+    "eyebrow": "DEIN SPIELERPROFIL",
+    "title": "Dein eigener Weg",
+    "description": "Es gibt nicht nur eine Art, in einer Welt dazuzugehören. Deine Entscheidungen zeigen, was deinen Weg ausmacht.",
+    "strongest": "DEIN STÄRKSTER INSTINKT",
+    "scoreBreakdown": "Dein Spielstil-Mix",
+    "scoreNote": "Jede Entscheidung bringt einem Spielertyp einen Punkt. Die Prozentwerte zeigen die Verteilung deiner Entscheidungen.",
+    "points": "{{count}} Pkt.",
+    "retake": "Nochmal spielen",
+    "share": "Ergebnis kopieren",
+    "copied": "Kopiert",
+    "copyError": "Das Ergebnis konnte nicht kopiert werden. Bitte versuche es erneut.",
+    "acknowledgement": "Inspiriert von Richard Bartles Spielertypen-Taxonomie und dem genannten Bartle-Test. Diese Version verwendet eigene Fragen."
+  },
+  "types": {
+    "socialiser": {
+      "name": "Geselliger",
+      "short": "Der Freundeskreis-Pfleger",
+      "description": "Für dich erwacht eine Welt durch ihre Menschen zum Leben. Gemeinsame Geschichten, vertraute Gesichter und neue Freundschaften sind das eigentliche Abenteuer."
+    },
+    "explorer": {
+      "name": "Entdecker",
+      "short": "Der neugierige Kartograf",
+      "description": "Du spielst, um hinter das Offensichtliche zu blicken. Verborgene Details, unerzählte Geschichten und das Verständnis einer Welt treiben dich an."
+    },
+    "achiever": {
+      "name": "Erfolgssucher",
+      "short": "Der zielstrebige Abenteurer",
+      "description": "Ein klares Ziel gibt deiner Reise Sinn. Du meisterst gern Herausforderungen, machst Fortschritte und findest heraus, wie weit dich dein Einsatz bringt."
+    },
+    "killer": {
+      "name": "Kämpfer",
+      "short": "Eine Naturgewalt",
+      "description": "Du blühst in intensiven Begegnungen mit echtem Einsatz auf. Der Wettbewerb reizt dich und du misst dein Können gern mit anderen."
+    }
+  },
+  "accessibility": {
+    "progress": "Testfortschritt",
+    "selected": "Ausgewählt",
+    "score": "Punktzahl für {{name}}: {{score}} Prozent"
+  },
+  "about": {
+    "index": "FELDNOTIZ / 01",
+    "description": "Bartles Taxonomie beschreibt vier Gründe, warum Menschen Mehrspielerwelten mögen: Gemeinschaft, Entdeckung, Erfolg und Wettbewerb. Die meisten Spielenden vereinen mehrere davon.",
+    "source": "Neue Entscheidungen, inspiriert von",
+    "sourceLink": "Richard Bartles Taxonomie"
+  },
+  "footer": {
+    "brand": "DIE GILDENHALLE",
+    "tagline": "EINE ERKUNDUNG DES SPIELS"
+  }
+}
