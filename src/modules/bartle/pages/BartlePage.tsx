@@ -225,7 +225,7 @@ export function BartlePage() {
         <span className={styles.constellation} />
       </div>
 
-      <header className="relative z-10 mx-auto flex min-h-16 w-full max-w-7xl items-center gap-3 border-b border-cream/10 px-4 md:min-h-20 md:gap-5 md:px-8">
+      <header className="relative z-20 mx-auto flex min-h-16 w-full max-w-7xl items-center gap-3 border-b border-cream/10 px-4 md:min-h-20 md:gap-5 md:px-8">
         <a
           className="inline-flex cursor-pointer items-center gap-2.5 font-sans font-semibold text-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           href="/"
@@ -243,7 +243,7 @@ export function BartlePage() {
         <span className="hidden font-mono text-xs tracking-[0.1em] text-accent sm:inline">{t('nav.fieldGuide')}</span>
         {phase === 'test' && (
           <button
-            className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center gap-2 border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto sm:px-3"
+            className="ml-auto inline-flex size-10 shrink-0 cursor-pointer items-center justify-center gap-2 border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto sm:px-3"
             type="button"
             onClick={resetTest}
             aria-label={t('test.reset')}
@@ -273,7 +273,7 @@ export function BartlePage() {
           />
         </label>
         <button
-          className="ml-auto inline-flex size-10 shrink-0 cursor-pointer items-center justify-center border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:ml-0 md:hidden"
+          className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center border border-cream/20 bg-transparent text-muted transition hover:border-accent hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden"
           type="button"
           aria-label={t('nav.language')}
           aria-expanded={languageMenuOpen}
