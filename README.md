@@ -33,6 +33,8 @@ Translated interface text is in `src/i18n/locales/{pt-BR,fr-FR,de-DE}/common.jso
 
 The UI uses Tailwind utility classes for standard layout, spacing, typography, colors, and responsive styling. Component Sass modules are reserved for bespoke visual effects and animation.
 
+The Vercel deployment serves this app at `/bartle`; Vite assets and client-side routes use that base path, with rewrites mapping requests back to the app's deployment root.
+
 Test progress and completed results are saved in the current browser tab and restored after a page reload. Returning to the intro and choosing **Begin your story** again displays the saved result; choose **Play again** on the results page to retake the test. The **Reset test** action clears the saved answers and starts again from the first question.
 On the results page, **Copy image** captures the player profile and score breakdown as a PNG and copies it to the clipboard. Clipboard image support requires a secure browser context and permission to write to the clipboard.
 

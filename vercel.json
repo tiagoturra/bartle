@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/bartle", "destination": "/" },
+    { "source": "/bartle/:path*", "destination": "/:path*" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

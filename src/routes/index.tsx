@@ -3,7 +3,7 @@ import { BartlePage } from '../modules/bartle/pages/BartlePage'
 
 export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <Routes>
         <Route path="/" element={<BartlePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
